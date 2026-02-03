@@ -564,61 +564,7 @@
             }
         }
     </style>
-<meta charset="UTF-8">
-<title>Be My Valentine 💘</title>
-
-<style>
-    body {
-        margin: 0;
-        height: 100vh;
-        overflow: hidden;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    h1 {
-        color: #fff;
-        font-size: 3rem;
-        text-shadow: 2px 2px #ff4d6d;
-    }
-
-    .container {
-        z-index: 2;
-    }
-
-    button {
-        font-size: 1.5rem;
-        padding: 15px 30px;
-        margin: 20px;
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-
-    #yesBtn {
-        background-color: #ff4d6d;
-        color: white;
-    }
-
-    #noBtn {
-        background-color: #fff;
-        color: #ff4d6d;
-    }
-
-    #imageBox img {
-        max-width: 320px;
-        border-radius: 15px;
-        margin-top: 20px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-</style>
 </head>
-
 <body>
     <div class="balloons">
         <div class="balloon"></div>
@@ -713,13 +659,7 @@
     <div class="footer">
         <p>Made with <i class="fas fa-heart" style="color:var(--primary-pink);"></i> for Valentine's Day</p>
         <p>Two black kitties are hoping for a "YES!"</p>
-
-<div class="container">
-    <h1>Will you be my Valentine? 💖</h1>
-
-    <div id="imageBox">
-        <img src="cute-cat.png" alt="cute cat">
-</div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -850,51 +790,7 @@
                     50% { transform: scale(1.08); }
                     100% { transform: scale(1); }
                 }
-    <button id="yesBtn">Yes 💕</button>
-    <button id="noBtn">No 🙄</button>
-</div>
-
-<script>
-    let yesScale = 1;
-    let noClicks = 0;
-
-    const noTexts = [
-        "Please? 😿",
-        "PWETTY PWEESE? 😿😿😿",
-        "Pretty Please I Give You a Kiss ( ˘ ³˘)",
-        "R U BEING FR RN??? ( ╹ -╹)?",
-        "QUIT PLAYING IMMA SMACK YOU 👊😡👊",
-        "If You Don't Say Yes RN (૭ ｡•̀ ᵕ •́｡ )૭"
-    ];
-
-    const catImages = [
-        "dumb-cat.png",
-        "pleading-cat.png",
-        "crying-cat.png",
-        "angry-cat.png",
-        "sad-cat.png",
-        "final-cat.png"
-    ];
-
-    const imageBox = document.getElementById("imageBox");
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-
-    noBtn.addEventListener("click", () => {
-        // Grow YES button
-        yesScale += 0.2;
-        yesBtn.style.transform = `scale(${yesScale})`;
-
-        // Update No button text
-        if (noClicks < noTexts.length) {
-            noBtn.textContent = noTexts[noClicks];
-        }
-
-        // Update image
-        if (noClicks < catImages.length) {
-            imageBox.innerHTML = `
-                <img src="${catImages[noClicks]}" alt="photo ${noClicks + 1}">
-           `;
+            `;
             document.head.appendChild(styleSheet);
             
             // Initial message
@@ -919,19 +815,5 @@
             });
         });
     </script>
-        }
-
-        noClicks++;
-    });
-
-    yesBtn.addEventListener("click", () => {
-        document.body.innerHTML = `
-            <h1 style="color:white; font-size:4rem;">
-                YAY BAE YAY BAE! 💗😻
-            </h1>
-        `;
-    });
-</script>
-
 </body>
 </html>
